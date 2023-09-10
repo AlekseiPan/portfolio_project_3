@@ -1,4 +1,4 @@
-# Сайт проекта House of gambling
+# Сайт House of gambling
 
 npm i - установка зависимостей
 npm run build - сборка проекта с помощью gulp
