@@ -1,0 +1,230 @@
+.main-nav {
+  @media (min-width: @desktop-width) {
+    border: 4px solid @blue;
+    border-radius: 64px;
+    padding: 20px 45px;
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 14px;
+    align-items: center;
+  }
+}
+
+.main-nav__container {
+  border: 2px solid @blue;
+  border-radius: 64px;
+  padding: 8px 14px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+
+  @media (min-width: @desktop-width) {
+    border: none;
+    padding: 0;
+  }
+}
+
+.main-nav__button-language {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-transform: uppercase;
+  color: @white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  padding: 5px;
+  border: 2px solid @purple;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover {
+    background-color: @blue;
+    border-color: @blue;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: auto;
+    height: auto;
+    min-width: 75px;
+    max-width: 150px;
+    border-radius: 24px;
+    padding: 12px 10px;
+    column-gap: 8px;
+  }
+}
+
+.main-nav__button-language-caption {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
+.main-nav__toggle {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  border: none;
+  background-color: transparent;
+  padding: 5px;
+  cursor: pointer;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 14px;
+  top: 11px;
+  left: 7px;
+  background-image: url("../../img/stripes.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.main-nav--opened .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 9px;
+  left: 9px;
+  background-image: url("../../img/cross.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.main-nav--closed .main-nav__menu-list,
+.main-nav--closed .main-nav__account {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
+}
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
+.main-nav--nojs .main-nav__menu-list,
+.main-nav--nojs .main-nav__account {
+  display: block;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
+}
+
+.main-nav__menu-list {
+  list-style: none;
+  padding: 30px 0 30px;
+  margin: 0;
+
+  @media (min-width: @desktop-width) {
+    order: -1;
+    padding: 0;
+    margin-right: 177px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+}
+
+.main-nav__menu-item:not(:last-child) {
+  margin-bottom: 5px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.main-nav__menu-link {
+  font-size: 18px;
+  line-height: 24px;
+  display: block;
+  padding: 11px 20px;
+  border: 2px solid @blue;
+  border-radius: 28px;
+
+  &:hover {
+    background-color: @blue;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 16px;
+    line-height: 20px;
+    max-width: 200px;
+    padding: 8px;
+    border: none;
+
+    &:hover {
+      color: @blue;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+  }
+}
+
+.main-nav__account {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
+.main-nav__log-in,
+.main-nav__sign-up {
+  display: block;
+  border-radius: 24px;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: @desktop-width) {
+    padding: 12px 14px;
+  }
+}
+
+.main-nav__log-in {
+  padding: 11px 12px;
+  border: 2px solid @purple;
+  margin-bottom: 5px;
+
+  &:hover {
+    background-color: @blue;
+    border-color: @blue;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+    min-width: 87px;
+    max-width: 150px;
+  }
+}
+
+.main-nav__sign-up {
+  padding: 13px 14px;
+  background-color: @blue;
+
+  &:hover {
+    background-color: @blue-opacity-60;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 97px;
+    max-width: 150px;
+  }
+}

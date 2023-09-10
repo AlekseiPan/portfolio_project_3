@@ -1,0 +1,227 @@
+.page-home {
+  background-image: url("../../img/dot-lights/mobile/upper-dot-light.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: none;
+
+  @media (min-width: @desktop-width) {
+    width: 1920px;
+    padding: 0 140px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 647px 334px 1fr;
+    column-gap: 64px;
+    background-image: none;
+  }
+}
+
+.page-home__partnership {
+  width: 320px;
+  padding: 60px 10px 32px;
+  margin: 0 auto;
+
+  @media (min-width: @desktop-width) {
+    width: auto;
+    padding: 298px 0 356px;
+  }
+}
+
+.page-home__header {
+  font-size: 46px;
+  line-height: 50px;
+  font-weight: 500;
+  margin: 0 0 12px;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: @desktop-width) {
+    font-size: 96px;
+    line-height: 96px;
+    margin: 0 0 20px;
+    text-align: start;
+  }
+}
+
+.page-home__header-color {
+  color: @blue;
+}
+
+.page-home__proposal {
+  display: block;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 500;
+  color: @white-opacity-60;
+  text-align: center;
+  margin: 0 0 24px;
+
+  @media (min-width: @desktop-width) {
+    font-size: 32px;
+    line-height: 32px;
+    margin: 0 0 49px;
+    text-align: start;
+  }
+}
+
+.page-home__button-partnership {
+  font-size: 18px;
+  line-height: auto;
+  font-weight: 600;
+  display: block;
+  width: 300px;
+  background-color: @blue;
+  border-radius: 48px;
+  padding: 17px 20px 16px;
+  margin: 0 auto;
+
+  &:hover {
+    background-color: @blue-opacity-60;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 24px;
+    line-height: 32px;
+    width: 392px;
+    padding: 20px;
+    margin: 0;
+  }
+}
+
+.page-home__background {
+  position: relative;
+  height: 165px;
+  background-image: url("../../img/mobile-banner.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 660px 165px;
+  overflow: hidden;
+
+  @media (min-width: @desktop-width) {
+    height: auto;
+    background-image: url("../../img/desktop-banner.svg");
+    background-position: center -31px;
+    background-size: 334px 1334px;
+  }
+}
+
+.page-home__icon-world-1 {
+  width: 48px;
+  height: 49px;
+  position: absolute;
+  top: 58px;
+  left: calc(50% - 123px);
+  animation: moveLeftRight 5s linear infinite;
+
+  @media (min-width: @desktop-width) {
+    width: 99px;
+    height: 99px;
+    top: 385px;
+    left: 116px;
+    animation: moveTopBottom 5s linear infinite;
+  }
+}
+
+.page-home__icon-world-2 {
+  width: 48px;
+  height: 49px;
+  position: absolute;
+  top: 58px;
+  left: calc(50% + 185px);
+  animation: moveLeftRight 5s linear infinite;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+@keyframes moveLeftRight {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(60px);
+  }
+}
+
+@keyframes moveTopBottom {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateY(120px);
+  }
+}
+
+.page-home__icon-money-1,
+.page-home__icon-money-2 {
+  position: absolute;
+  bottom: 0;
+  animation: moveRightLeft 5s linear infinite;
+
+  @media (min-width: @desktop-width) {
+    width: 99px;
+    height: 99px;
+  }
+}
+
+.page-home__icon-money-1 {
+  left: calc(50% - 213px);
+
+  @media (min-width: @desktop-width) {
+    top: 205px;
+    left: 0;
+    animation: moveBottomTop 5s linear infinite;
+  }
+}
+
+.page-home__icon-money-2 {
+  left: calc(50% + 95px);
+
+  @media (min-width: @desktop-width) {
+    top: 830px;
+    left: 0;
+    animation: moveBottomTop 5s linear infinite;
+  }
+}
+
+.page-home__icon-crown {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 277px);
+  animation: moveRightLeft 5s linear infinite;
+
+  @media (min-width: @desktop-width) {
+    width: 99px;
+    height: 99px;
+    top: 80px;
+    left: auto;
+    right: 0;
+    animation: moveBottomTop 5s linear infinite;
+  }
+}
+
+@keyframes moveRightLeft {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-60px);
+  }
+}
+
+@keyframes moveBottomTop {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateY(-120px);
+  }
+}

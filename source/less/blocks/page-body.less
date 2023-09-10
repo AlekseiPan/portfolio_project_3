@@ -1,0 +1,22 @@
+.page-body {
+  background-color: @black;
+  color: @white;
+  font-family: "Lexend", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  box-sizing: border-box;
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0 auto;
+  background-image: url("../../img/dot-lights/mobile/lower-dot-light.png");
+  background-repeat: no-repeat;
+  background-position: calc(50% + 130px) bottom;
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../../img/dot-lights/desktop/upper-dot-light.png"),
+      url("../../img/dot-lights/desktop/lower-dot-light.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: calc(50% - 600px) center, calc(50% + 900px) top;
+  }
+}

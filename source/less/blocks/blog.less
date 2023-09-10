@@ -1,0 +1,123 @@
+.blog {
+  width: 320px;
+  padding: 33px 10px 119px;
+  margin: 0 auto;
+
+  @media (min-width: @desktop-width) {
+    width: auto;
+    padding: 140px 0 220px;
+  }
+}
+
+.blog__header {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 0 18px;
+
+  @media (min-width: @desktop-width) {
+    font-size: 40px;
+    margin: 0 0 24px;
+  }
+}
+
+.blog__container {
+  border: 2px solid @blue;
+  border-radius: 50px;
+  overflow: hidden;
+  padding-right: 6px;
+  background-color: @white-opacity-12;
+
+  @media (min-width: @desktop-width) {
+    border-radius: 100px;
+    padding-right: 15px;
+  }
+}
+
+.blog__list {
+  display: block;
+  height: 417px;
+  overflow: auto;
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+
+  @media (min-width: @desktop-width) {
+    width: 514px;
+    height: 591px;
+    padding: 22px;
+  }
+}
+
+.blog__item:not(:last-child) {
+  margin: 0 0 10px;
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 16px;
+  }
+}
+
+.blog__link {
+  display: block;
+  padding: 13px 34px;
+  border-radius: 40px;
+  background-color: @black-blog;
+
+  &:hover {
+    background-color: @blue;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 14px 64px;
+    border-radius: 196px;
+  }
+}
+
+.blog__description {
+  margin: 0 0 6px;
+
+  @media (min-width: @desktop-width) {
+    font-size: 24px;
+    line-height: 28px;
+    margin: 0 0 14px;
+  }
+}
+
+.blog__date {
+  font-family: "FuturaPT", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  color: @white-opacity-60;
+}
+
+.simplebar-track.simplebar-vertical {
+  width: 4px;
+  background-color: @white-opacity-12;
+  top: 60px;
+  bottom: 60px;
+  border-radius: 4px;
+
+  @media (min-width: @desktop-width) {
+    width: 8px;
+    top: 96px;
+    bottom: 96px;
+  }
+}
+
+.simplebar-scrollbar {
+  background-color: @blue;
+  border-radius: 4px;
+
+  @media (min-width: @desktop-width) {
+    &:active {
+      background-color: @blue;
+    }
+  }
+}
+
+.simplebar-scrollbar::before {
+  background: none;
+}

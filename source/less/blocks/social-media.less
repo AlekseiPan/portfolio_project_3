@@ -1,0 +1,36 @@
+.social-media {
+  @media (min-width: @desktop-width) {
+    text-align: end;
+  }
+}
+
+.social-media__header {
+  margin-bottom: 8px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 14px;
+  }
+}
+
+.social-media__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: space-between;
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    gap: 13px;
+  }
+}
+
+.social-media__link {
+  color: @blue;
+
+  &:hover {
+    color: @blue-opacity-60;
+  }
+}
